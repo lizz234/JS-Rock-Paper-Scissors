@@ -99,6 +99,80 @@
 }
 
 
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    .game-name {
+        font-size: 40px;
+    }
+
+    .btn {
+        height: 100px;
+    }
+
+    .rock, .paper, .scissors {
+        height: 100px;
+        width: 100px;
+    }
+
+    .results, .final-result {
+        width: 300px;
+        height: 200px;
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    .score {
+        font-size: 13px;
+        margin-top: -8px;
+    }
+
+    .message {
+        margin-top: 5px;
+    }
+
+    .final-result {
+        font-size: large;
+    }
+
+    #refreshButton {
+        width: 150px;
+        height: 40px;
+    }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+    .game-name {
+        font-size: 30px;
+    }
+
+    .btn {
+        height: 80px;
+    }
+
+    .rock, .paper, .scissors {
+        height: 80px;
+        width: 80px;
+    }
+
+    .results, .final-result {
+        width: 250px;
+        height: 180px;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .final-result {
+        font-size: medium;
+    }
+
+    #refreshButton {
+        width: 120px;
+        height: 35px;
+    }
+}
+
+
 
 
 

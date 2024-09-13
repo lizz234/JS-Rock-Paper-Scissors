@@ -29,7 +29,6 @@ function getComputerChoice(){
     return gameChoices[choice];
 }
 
-
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         msg.textContent = "A tie! Looks like you’re both secretly teaming up🤔";
@@ -110,7 +109,6 @@ function rounds(e) {
     }
 }
 
-
 function playGame() {
     rock.addEventListener('click', (e) => {
         rounds(e);
@@ -123,7 +121,6 @@ function playGame() {
     });
 
 }
-
 
 playGame();
 
