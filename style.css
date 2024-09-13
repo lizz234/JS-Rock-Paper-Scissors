@@ -2,7 +2,7 @@
     margin: none;
     padding: none;
     background-color: lightcyan;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
 }
 
 .game-name {
@@ -102,11 +102,16 @@
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
     .game-name {
+        padding: 20px;
         font-size: 40px;
     }
 
+    * {
+        background-color: whitesmoke;
+    }
+
     .btn {
-        height: 100px;
+        height: 250px;
     }
 
     .rock, .paper, .scissors {
@@ -144,11 +149,16 @@
 /* Smaller mobile screens */
 @media (max-width: 480px) {
     .game-name {
+        padding: 20px;
         font-size: 30px;
     }
 
+    * {
+        background-color: whitesmoke;
+    }
+
     .btn {
-        height: 80px;
+        height: 200px;
     }
 
     .rock, .paper, .scissors {
