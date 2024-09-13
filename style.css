@@ -2,7 +2,7 @@
     margin: none;
     padding: none;
     background-color: lightcyan;
-    font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+    font-family: 'Comic Sans MS', 'Brush Script MT', sans-serif, cursive;
 }
 
 .game-name {
