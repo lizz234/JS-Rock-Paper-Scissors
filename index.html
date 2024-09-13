@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock,Paper or Scissors</title>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"> </script>
+    <header class="game-name">
+        <font color="#F23589">ROCK</font><font color="8A2BE2">,</font>
+        <font color="#FFCF09">PAPER</font> 
+        <font color="8A2BE2">or</font> 
+        <font color="#01C9EA">SCISSORS</font></header>
+    <div class="container">
+        <div class="btn">
+            <img class="rock" id="rock" src="Rock.png" alt="Rock">
+            <img class="paper" id="paper" src="Paper.png"alt="Paper">
+            <img class="scissors" id="scissors" src="Scissors.png" alt="Scissors">
+        </div>
+        <div class="results">
+            <div class="score">
+                <p>Computer Score: <span id="computerScoreDisplay">0</span></p>
+                <p class="computer-move"></p>
+                <p>Your Score: <span id="humanScoreDisplay">0</span></p>
+                <p class="human-move"></p>
+            </div>
+            <div class="message"></div>
+        </div>
+        <div class="final-result">
+            <div class="win-lose">
+            </div>
+            
+            
+        </div>
+        <button id="refreshButton">Play Again</button>
+
+    </div>
+    
+    <script src="scripts.js" defer> </script>
 </body>
 </html>
