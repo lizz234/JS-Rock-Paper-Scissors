@@ -7,11 +7,18 @@ let res = document.querySelector('.final-result');
 let roundRes = document.querySelector('.results')
 let compScore = document.querySelector('#computerScoreDisplay');
 let humScore = document.querySelector('#humanScoreDisplay');
+let roundDisplay = document.querySelector('#roundDisplay')
+let roundCountDisplay = document.querySelector('.round-count');
 let btn = document.querySelector('#refreshButton');
 
 let computerScore = 0;
 let humanScore = 0;
 let roundCount = 0;
+
+function increaseRoundCount() {
+    roundCount++;
+    roundDisplay.textContent = roundCount;
+}
 
 function increaseHumanScore() {
     humanScore++;
@@ -32,11 +39,12 @@ function getComputerChoice(){
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         msg.textContent = "A tie! Looks like you’re both secretly teaming up🤔";
+        increaseComputerScore();
+        increaseHumanScore();
     } 
     else if (humanChoice === "rock" && computerChoice === "paper") {
         msg.textContent = "You Lose! paper beats rock☹️";
         increaseComputerScore();
-
     }
     else if (humanChoice === "rock" && computerChoice === "scissors") {
         msg.textContent = "You Won! rock beats scissors😃";
@@ -55,7 +63,6 @@ function playRound(humanChoice, computerChoice) {
         increaseComputerScore();
     }
     else {
-
         msg.textContent = "You Won! scissors beats paper😃";
         increaseHumanScore();
     }
@@ -63,6 +70,7 @@ function playRound(humanChoice, computerChoice) {
 
 function showEndScreen() {
     if (humanScore > computerScore) {
+        roundCountDisplay.style.display = "none";
         roundRes.style.display = "none";
         res.style.display = "flex";
         btn.style.display = "block";
@@ -73,6 +81,7 @@ function showEndScreen() {
         
     }
     else if (computerScore > humanScore) {
+        roundCountDisplay.style.display = "none";
         roundRes.style.display = "none";
         res.style.display = "flex";
         btn.style.display = "block";
@@ -83,6 +92,7 @@ function showEndScreen() {
         
     }
     else {
+        roundCountDisplay.style.display = "none";
         roundRes.style.display = "none";
         res.style.display = "flex";
         btn.style.display = "block";
@@ -101,10 +111,10 @@ function rounds(e) {
         
         playRound(humanChoice, computerChoice);
 
-        roundCount++;
+        increaseRoundCount();
         
         if(roundCount === 5) {
-            setTimeout(() => showEndScreen(), 5);
+            setTimeout(() => showEndScreen(), 500);
         } 
     }
 }

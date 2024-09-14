@@ -3,12 +3,21 @@
     padding: none;
     background-color: lightcyan;
     font-family: 'Comic Sans MS', 'Brush Script MT', sans-serif, cursive;
+    font-style: oblique;
 }
 
 .game-name {
     text-align: center;
     font-size: 60px;
     font-weight: bold;
+}
+
+.round-count {
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: -295px;
 }
 
 .container {
@@ -29,17 +38,27 @@
 .rock {
     height: 150px;
     width: 150px;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
 .paper {
     margin: 0 20px;
     height: 150px;
     width: 150px;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
 .scissors {
     height: 175px;
     width: 150px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.rock:hover, .paper:hover, .scissors:hover {
+    transform: scale(1.1);
 }
 
 .results {
@@ -59,7 +78,7 @@
     font-weight: bold;
     display: flex;
     justify-content: space-around;
-    margin-top: -18px;
+    margin-top: 10px;
 }
 
 .message {
@@ -79,7 +98,8 @@
     justify-content: center;
     align-items: center;
     font-size: xx-large;
-    font-weight: bold;  
+    font-weight: bold; 
+    font-style: none; 
 }
 
 #refreshButton {
@@ -92,6 +112,7 @@
     border-color: blueviolet;
     border-radius: 10px; 
     font-size: large;
+    cursor: pointer;
 }
 
 #refreshButton:hover {
@@ -110,12 +131,22 @@
         background-color: whitesmoke;
     }
 
+    .round-count {
+        font-size: 13px;
+        margin-top: -240px;
+    }
+
     .btn {
         height: 250px;
     }
 
-    .rock, .paper, .scissors {
+    .rock, .paper {
         height: 100px;
+        width: 100px;
+    }
+
+    .scissors {
+        height: 125px;
         width: 100px;
     }
 
@@ -161,8 +192,13 @@
         height: 200px;
     }
 
-    .rock, .paper, .scissors {
+    .rock, .paper{
         height: 80px;
+        width: 80px;
+    }
+
+    .scissors {
+        height: 95px;
         width: 80px;
     }
 
@@ -183,6 +219,11 @@
         margin-top: -80px;
     }
 }
+
+
+
+
+
 
 
 
